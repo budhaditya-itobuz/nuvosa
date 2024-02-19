@@ -1,52 +1,59 @@
+:root{
+    --p-text:#828282;
+    --heading:#212528;
+    --text-primary:#6F77F1;
+    --primary-bg:#FAFAFA;
+    --border-bottom:2px solid white;
+    --nav-borer-hover:linear-gradient(to right, #6F77F1, #6F77F1 70%, white 70%, white 80%, #6F77F1 80%, #6F77F1);
+}
 * {
     
     font-family: "poppins" !important;
-    color: #212528;
+}
+body{
+    color:#212528;
 }
 
+
 .p-text {
-    color: #828282;
+    color: var(--p-text);
     font-size: 13px !important;
     font-style: normal !important;
     font-weight: 400 !important;
     line-height: 150%;
 }
-.hover-effect{
-    border-bottom:2px solid white;
-    &:hover {           
-        border-image: linear-gradient(to right, #6F77F1, #6F77F1 70%, white 70%, white 80%, #6F77F1 80%, #6F77F1);
-        border-image-slice: 1;
-      }
-}
 .heading {
     font-size: 40px;
     font-style: normal;
     font-weight: 500;
-    color: #212528;
-}
-.nav-item:hover{
-    &::before{
-        background-color:blue;
-        width:70%;
-        height: 5px;
-    }
-}
-.nav-item:hover{
-    &::after{
-        background-color: red;
-        width:25%;
-        height: 5px;
-    }
+    color: var(--heading);
 }
 
 .text-primary {
-    color: #6F77F1;
+    color: var(--text-primary);
 }
 
-.bg-secondary {
-    background-color: #FAFAFA !important;
+.primary-bg {
+    background-color: var(--primary-bg) ;
 }
 
+.hover-effect{
+    border-bottom:var(--border-bottom);
+    &:hover {           
+        border-image: var(--nav-borer-hover);
+        border-image-slice: 1;
+      }
+}
+.theme-btn{
+    border:none;
+    background-color: #212528;
+    height: 40px;
+    width: 40px;
+    img{
+        width: 15px;
+    }
+    border-radius: 3px;
+}
 
 .hero-info {
     max-width: 650px;
@@ -118,9 +125,6 @@
     }
 }
 
-
-
-
 .hero-image {
     .container {
 
@@ -160,7 +164,6 @@
         max-width: 4.25em !important;
     }
 }
-
 
 .business-solution {
     background: url('./images/business-solution/background.svg');
@@ -206,7 +209,9 @@
         transform: scale(1.1);
         background: url('./images/our-plans/card-bg.svg');
         background-position: center;
-
+        h4{
+            color: white !important;
+        }
         h5 {
             color: white !important;
 
@@ -218,13 +223,6 @@
                 color: inherit;
             }
         }
-
-        h4 {
-            visibility: hidden;
-        }
-
-
-
     }
 }
 
@@ -246,7 +244,7 @@
 }
 
 .optimize-card {
-    border-bottom: 3px solid white;
+    border-bottom: var(--border-bottom);
     max-width: 400px;
     img:first-child {
         z-index: -1;
@@ -263,7 +261,7 @@
     }
 
     &:hover {
-        border-bottom: 3px solid #717AE0;
+        border-bottom: 2px solid #717AE0;
     }
 }
 
@@ -402,7 +400,42 @@
         color:#828282;
     }
 }
-
+.dark{
+    --p-text:white;
+    --heading:white;
+    --primary-bg: #212528;
+    color: white !important;
+    --border-bottom:2px solid black;
+    --nav-borer-hover:linear-gradient(to right, #6F77F1, #6F77F1 70%, black 70%, black 80%, #6F77F1 80%, #6F77F1);
+    background-color: black;
+    .bg-white{
+        background-color: black !important;
+    }
+    a{
+        color: white !important;
+    }
+    .optimize-card{
+        .bg-number{
+            opacity: 0.2;
+        }
+    }
+    .business-solution{
+        background: var(--primary-bg);
+    }
+    img[alt="nuvosa"]
+    {
+        filter: invert(100%);
+    }
+    .plan-card,nav{
+        .btn{
+            border: 1px solid white;
+            color:white;
+        }
+    }
+    img[alt="take-a-tour"]{
+        filter: invert(100%);
+    }
+}
 @media (min-width:768px) {
     .business-solution {
         height: 60vh;
