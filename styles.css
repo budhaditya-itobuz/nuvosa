@@ -1,10 +1,10 @@
 :root {
-  --p-text:#828282;
-  --heading:#212528;
-  --text-primary:#6F77F1;
-  --primary-bg:#FAFAFA;
-  --border-bottom:2px solid white;
-  --nav-borer-hover:linear-gradient(to right, #6F77F1, #6F77F1 70%, white 70%, white 80%, #6F77F1 80%, #6F77F1);
+  --p-text: #828282;
+  --heading: #212528;
+  --text-primary: #6F77F1;
+  --primary-bg: #FAFAFA;
+  --border-bottom: 2px solid white;
+  --nav-borer-hover: linear-gradient(to right, #6F77F1, #6F77F1 70%, white 70%, white 80%, #6F77F1 80%, #6F77F1);
 }
 
 * {
@@ -355,12 +355,12 @@ body {
 }
 
 .dark {
-  --p-text:white;
-  --heading:white;
+  --p-text: white;
+  --heading: white;
   --primary-bg: #212528;
   color: white !important;
-  --border-bottom:2px solid black;
-  --nav-borer-hover:linear-gradient(to right, #6F77F1, #6F77F1 70%, black 70%, black 80%, #6F77F1 80%, #6F77F1);
+  --border-bottom: 2px solid black;
+  --nav-borer-hover: linear-gradient(to right, #6F77F1, #6F77F1 70%, black 70%, black 80%, #6F77F1 80%, #6F77F1);
   background-color: black;
 }
 .dark .bg-white {
@@ -378,7 +378,8 @@ body {
 .dark img[alt=nuvosa] {
   filter: invert(100%);
 }
-.dark .plan-card .btn, .dark nav .btn {
+.dark .plan-card .btn,
+.dark nav .btn {
   border: 1px solid white;
   color: white;
 }
